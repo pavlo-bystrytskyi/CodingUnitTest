@@ -42,9 +42,25 @@ class MainTest {
 
     @org.junit.jupiter.api.Test
     void upperCase() {
+        String[] strings = {"Some string", "abc", "QWERTZ"};
+        String[] expectedResults = {"SOME STRING", "ABC", "QWERTZ"};
+        for (int i = 0; i < strings.length; i++) {
+            assertEquals(
+                    Main.upperCase(strings[i]),
+                    expectedResults[i]
+            );
+        }
     }
 
     @org.junit.jupiter.api.Test
-    void numberIsPositive() {
+    void isPositive() {
+        int[] numbers = {1, -2, 0, -1, 5};
+        boolean[] expectedResults = {true, false, true, false, true};
+        for (int i = 0; i < numbers.length; i++) {
+            assertEquals(
+                    Main.isPositive(numbers[i]),
+                    expectedResults[i]
+            );
+        }
     }
 }

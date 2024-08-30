@@ -30,7 +30,7 @@ public class Main {
         return string.toUpperCase();
     }
 
-    public static boolean numberIsPositive(int number)  {
-        return number > 0;
+    public static boolean isPositive(int number)  {
+        return number >= 0;
     }
 }
